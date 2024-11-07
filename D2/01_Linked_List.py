@@ -23,7 +23,8 @@ while current is not None:
     print(current.data, end=" => ")
     current = current.next
 print("None")  # Indicate the end of the list
-
+ 
+ 
 ############ data Insert on first position########
 class Node:
     def __init__(self, data):
