@@ -131,3 +131,61 @@ while current is not None:
     print(current.data, end=" => ")
     current = current.next
 print("None")  # Indicate the end of the list
+
+########## delete any postion
+class Node:
+    def __init__(self, data):
+        self.data = data  # Store data in the node
+        self.next = None  # Initialize the next node as None
+
+# Creating nodes with data
+node1 = Node(10)
+node2 = Node(20)
+node3 = Node(4)
+node4 = Node(50)
+
+# Linking nodes
+node1.next = node2
+node2.next = node3
+node3.next = node4
+
+# Deleting node3 by adjusting node2's next pointer to skip node3
+node2.next = node3.next  # Point node2's next to node4, effectively removing node3
+
+# Traversing and printing the updated linked list
+current = node1
+while current is not None:
+    print(current.data, end=" => ")
+    current = current.next
+print("None")  # Indicate the end of the list
+
+############ delete last Node
+class Node:
+    def __init__(self, data):
+        self.data = data  # Store data in the node
+        self.next = None  # Initialize the next node as None
+
+# Creating nodes with data
+node1 = Node(10)
+node2 = Node(20)
+node3 = Node(4)
+node4 = Node(50)
+
+# Linking nodes
+node1.next = node2
+node2.next = node3
+node3.next = node4
+
+# Deleting the last node
+current = node1
+while current.next.next is not None:  # Traverse to the second-to-last node
+    current = current.next
+
+current.next = None  # Remove reference to the last node
+
+# Traversing and printing the updated linked list
+current = node1
+while current is not None:
+    print(current.data, end=" => ")
+    current = current.next
+print("None")  # Indicate the end of the list
