@@ -1,6 +1,6 @@
 #######singly linked list
 
-############ Normal singly linked list #####
+########### Normal singly linked list #####
 class Node:
     def __init__(self, data):
         self.data = data  # Store data in the node
@@ -54,7 +54,7 @@ while current is not None:
 print("None")  # Indicate the end of the list
 
 
-############ data insert last position and  any position###
+########### data insert last position and  any position###
 class Node:
     def __init__(self, data):
         self.data = data
@@ -100,6 +100,33 @@ current.next = new_node_200
 
 # Traversing and printing the updated linked list
 current = node1
+while current is not None:
+    print(current.data, end=" => ")
+    current = current.next
+print("None")  # Indicate the end of the list
+
+########## delete first Node 
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+# Creating nodes with data
+node1 = Node(10)
+node2 = Node(20)
+node3 = Node(4)
+node4 = Node(50)
+
+# Linking nodes
+node1.next = node2
+node2.next = node3
+node3.next = node4
+
+# Deleting node1 by moving the head to the next node
+head = node1.next  # Make node2 the new head of the list
+
+# Traversing and printing the updated linked list
+current = head
 while current is not None:
     print(current.data, end=" => ")
     current = current.next
