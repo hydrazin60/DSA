@@ -30,7 +30,7 @@ class Node:
     def __init__(self, data):
         self.data = data  # Store data in the node
         self.next = None  # Initialize the next node as None
-        
+
 # Creating nodes with data
 node1 = Node(10)
 node2 = Node(20)
